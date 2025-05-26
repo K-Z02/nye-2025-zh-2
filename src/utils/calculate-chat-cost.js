@@ -85,7 +85,7 @@ export function calculateChatCost(conversation, params) {
 
     const finalValue = params.currency === 'HUF' ? totalUSD * ONE_USD : totalUSD;
 
-    return `${finalValue.toFixed(6)} ${params.currency}`;
+    return `${Number(finalValue.toFixed(6))} ${params.currency}`;
 }
 
 function calculateSingleCost(entry, countType) {
